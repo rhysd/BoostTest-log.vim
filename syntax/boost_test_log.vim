@@ -12,6 +12,7 @@ syntax match boost_test_logFailure   '^\*\*\* \d\+ failures\? detected in test s
 syntax match boost_test_logSuccess   '^\*\*\* No errors detected$' contained containedin=boost_test_logReport
 syntax match boost_test_logErrorLine '^[/._:[:alnum:]]\+ error in ".*":.*$'
 syntax match boost_test_logError     'exception .\+ is expected$' contained containedin=boost_test_logErrorLine
+syntax match boost_test_logError     'exception thrown by .*$' contained containedin=boost_test_logErrorLine
 syntax match boost_test_logError     '\h\w*\.\w\+:\d\+:' contained containedin=boost_test_logErrorLine
 syntax match boost_test_logError     '^Assertion failed:'
 syntax match boost_test_logFailure   '^Test Failed\.$'
