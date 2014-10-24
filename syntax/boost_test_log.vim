@@ -15,6 +15,8 @@ syntax match boost_test_logError           'exception .\+ is expected$' containe
 syntax match boost_test_logError           'exception thrown by .*$' contained containedin=boost_test_logErrorLine
 syntax match boost_test_logError           '\h\w*\.\w\+:\d\+:' contained containedin=boost_test_logErrorLine
 syntax match boost_test_logError           '^Assertion failed:'
+syntax match boost_test_logError           'signal: SIGABRT'
+syntax match boost_test_logError           'signal: SIGSEGV'
 syntax match boost_test_logFailure         '^Test Failed\.$'
 syntax match boost_test_logSuccess         '^Test Passed\.$'
 syntax match boost_test_logTestName        '^\d\+/\d\+ Testing: \zs.\+$'
